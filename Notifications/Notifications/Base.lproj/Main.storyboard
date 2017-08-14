@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Notifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAd-GD-5Og">
+                                <rect key="frame" x="141" y="318" width="92" height="30"/>
+                                <state key="normal" title="Go to 2nd VC"/>
+                                <connections>
+                                    <segue destination="3lz-p3-Z9f" kind="presentation" id="Lo7-xm-LgT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hAd-GD-5Og" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q9q-Qg-tnC"/>
+                            <constraint firstItem="hAd-GD-5Og" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zov-42-jNT"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="2Lg-3B-Kmc">
+            <objects>
+                <viewController id="3lz-p3-Z9f" customClass="SecondViewController" customModule="Notifications" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tcb-yp-8Nc"/>
+                        <viewControllerLayoutGuide type="bottom" id="kh0-dV-1Jc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Ah-I5-XhU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ9-oe-78G">
+                                <rect key="frame" x="158" y="318" width="58" height="30"/>
+                                <state key="normal" title="Go Back"/>
+                                <connections>
+                                    <action selector="goBack_pressed:" destination="3lz-p3-Z9f" eventType="touchUpInside" id="Xhl-5u-Kde"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntt-bn-VnH">
+                                <rect key="frame" x="126" y="162" width="111" height="30"/>
+                                <state key="normal" title="Post notification"/>
+                                <connections>
+                                    <action selector="post_pressed:" destination="3lz-p3-Z9f" eventType="touchUpInside" id="3CQ-0J-wXP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-Ng-jlz">
+                                <rect key="frame" x="126" y="231" width="122" height="30"/>
+                                <state key="normal" title="Green notification"/>
+                                <connections>
+                                    <action selector="green_notification:" destination="3lz-p3-Z9f" eventType="touchUpInside" id="ahW-QH-K5S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Xc6-Ng-jlz" firstAttribute="top" secondItem="Ntt-bn-VnH" secondAttribute="bottom" constant="39" id="BxQ-vd-Ph4"/>
+                            <constraint firstItem="Xc6-Ng-jlz" firstAttribute="centerX" secondItem="4Ah-I5-XhU" secondAttribute="centerX" id="R6A-Ih-gYF"/>
+                            <constraint firstItem="gQ9-oe-78G" firstAttribute="top" secondItem="Xc6-Ng-jlz" secondAttribute="bottom" constant="57" id="cp8-AE-AsZ"/>
+                            <constraint firstItem="Xc6-Ng-jlz" firstAttribute="centerX" secondItem="gQ9-oe-78G" secondAttribute="centerX" id="dU0-JB-4qe"/>
+                            <constraint firstItem="Ntt-bn-VnH" firstAttribute="leading" secondItem="Xc6-Ng-jlz" secondAttribute="leading" id="wYD-P4-gmz"/>
+                            <constraint firstItem="gQ9-oe-78G" firstAttribute="centerY" secondItem="4Ah-I5-XhU" secondAttribute="centerY" id="yoO-LJ-8ie"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bdN-2e-pes" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="895" y="136"/>
+        </scene>
+    </scenes>
+</document>

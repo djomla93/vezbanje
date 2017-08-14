@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Player" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mu-x9-ZnX">
+                                <rect key="frame" x="9" y="163" width="117" height="30"/>
+                                <state key="normal" title="Play from Project"/>
+                                <connections>
+                                    <action selector="playFile_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHj-2H-4YK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KhS-sF-Lys">
+                                <rect key="frame" x="245" y="169" width="93" height="30"/>
+                                <state key="normal" title="Play from URl"/>
+                                <connections>
+                                    <action selector="asdsa:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sYc-fE-9oF"/>
+                                    <action selector="play_url_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sm7-jf-mw7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k1o-sz-OX6">
+                                <rect key="frame" x="87" y="260" width="32" height="30"/>
+                                <state key="normal" title="Stop"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5hQ-T4-CuD">
+                                <rect key="frame" x="235" y="254" width="42" height="30"/>
+                                <state key="normal" title="Pause"/>
+                                <connections>
+                                    <action selector="pause_action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hwD-DC-R3n"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wmw-ZD-Sbq">
+                                <rect key="frame" x="7" y="50" width="354" height="31"/>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8uy-h4-MCA">
+                                <rect key="frame" x="7" y="357" width="354" height="31"/>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="KhS-sF-Lys" secondAttribute="trailing" constant="21" id="5En-ZQ-4pU"/>
+                            <constraint firstItem="k1o-sz-OX6" firstAttribute="top" secondItem="4Mu-x9-ZnX" secondAttribute="bottom" constant="67" id="CFc-1O-0ac"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5hQ-T4-CuD" secondAttribute="trailing" constant="82" id="JbX-dJ-jqs"/>
+                            <constraint firstItem="4Mu-x9-ZnX" firstAttribute="top" secondItem="wmw-ZD-Sbq" secondAttribute="bottom" constant="83" id="PQB-W0-ikW"/>
+                            <constraint firstAttribute="trailing" secondItem="wmw-ZD-Sbq" secondAttribute="trailing" constant="16" id="XNQ-Bd-rrm"/>
+                            <constraint firstItem="wmw-ZD-Sbq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="XaJ-eJ-Agz"/>
+                            <constraint firstItem="wmw-ZD-Sbq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="aXt-GS-dxv"/>
+                            <constraint firstItem="8uy-h4-MCA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="dDq-j3-xlL"/>
+                            <constraint firstItem="8uy-h4-MCA" firstAttribute="top" secondItem="k1o-sz-OX6" secondAttribute="bottom" constant="67" id="eJr-wx-izw"/>
+                            <constraint firstAttribute="trailing" secondItem="8uy-h4-MCA" secondAttribute="trailing" constant="16" id="fYm-bc-dE2"/>
+                            <constraint firstItem="5hQ-T4-CuD" firstAttribute="top" secondItem="KhS-sF-Lys" secondAttribute="bottom" constant="55" id="hwJ-bH-0g1"/>
+                            <constraint firstItem="4Mu-x9-ZnX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="9" id="l34-c6-2Y7"/>
+                            <constraint firstItem="k1o-sz-OX6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="psb-KB-EVL"/>
+                            <constraint firstItem="KhS-sF-Lys" firstAttribute="top" secondItem="wmw-ZD-Sbq" secondAttribute="bottom" constant="89" id="rUc-fb-3Kl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PlayFromURLButton" destination="KhS-sF-Lys" id="sX8-oE-4I0"/>
+                        <outlet property="pauseButton" destination="5hQ-T4-CuD" id="uqH-ya-5wn"/>
+                        <outlet property="playFromProjectButton" destination="4Mu-x9-ZnX" id="TSl-40-nZV"/>
+                        <outlet property="pogresSlider" destination="wmw-ZD-Sbq" id="tcg-7d-V4F"/>
+                        <outlet property="stopButton" destination="k1o-sz-OX6" id="GcE-27-2nb"/>
+                        <outlet property="volumeSlider" destination="8uy-h4-MCA" id="Ozv-7h-U4z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
